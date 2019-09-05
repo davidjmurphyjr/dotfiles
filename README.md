@@ -2,7 +2,7 @@
 
 Installation
 ```
-git clone https://github.com/erangaeb/dotfiles.git ~/.dotfiles
+git clone https://github.com/davidjmurphyjr/dotfiles.git ~/.dotfiles
 ```
 
 
