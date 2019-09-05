@@ -8,5 +8,5 @@ git clone https://github.com/davidjmurphyjr/dotfiles.git ~/.dotfiles
 
 Create symlinks
 ```
-ln -s ~/.dotfiles/zshrc ~/.zshrc
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ```
