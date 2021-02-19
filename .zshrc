@@ -1,25 +1,21 @@
-
-# https://github.com/lukechilds/zsh-nvm
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
-
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+setopt autocd beep extendedglob notify 
+unsetopt nomatch
+bindkey -e # Emacs keybindings 
+
+# Command history configuration
+HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd beep extendedglob notify
-unsetopt appendhistory nomatch
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/Users/davidmurphy/.zshrc'
+setopt sharehistory
 
+# Completion System -- The following lines were added by compinstall
+zstyle :compinstall filename '/Users/davidmurphy/.zshrc'
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 #match middle of word
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
-
 zstyle ':completion:*' menu select.
 
 # Load version control information
@@ -29,11 +25,10 @@ precmd() {
 	print -Pn "\e]0;%1~\a";
 }
 
-
 autoload -U colors && colors
 # Format the vcs_info_msg_0_ variable
 
-# # Lines for vcs_info prompt configuration
+# Lines for vcs_info prompt configuration
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats ": %{$fg[magenta]%}%b%{$reset_color%} %m%{$fg[green]%}%c%{$reset_color%}%{$fg[red]%}%u%{$reset_color%}"
 zstyle ':vcs_info:git:*' actionformats ": %{$fg[magenta]%}(%a|%m)%{$reset_color%} %{$fg[green]%}%c%{$reset_color%}%{$fg[red]%}%u%{$reset_color%}"
@@ -73,3 +68,7 @@ PS1=' %{$fg[blue]%}%1~%{$reset_color%} ${vcs_info_msg_0_} > '
 
 #iTerm integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#### Docker
+ fpath=(~/.zsh/completion $fpath)
+ autoload -Uz compinit && compinit -i
