@@ -72,3 +72,19 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #### Docker
  fpath=(~/.zsh/completion $fpath)
  autoload -Uz compinit && compinit -i
+
+ # add maven to path for Moody's
+path+=/Users/davidmurphy/bin/apache-maven-3.6.3/bin
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+
+
+ # add folder for npm global installs to path
+ # https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+path+=/Users/davidmurphy/.npm-global/bin
