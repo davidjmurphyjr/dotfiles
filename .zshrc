@@ -74,7 +74,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
  autoload -Uz compinit && compinit -i
 
  # add maven to path for Moody's
-path+=/Users/davidmurphy/bin/apache-maven-3.6.3/bin
+path+=~/bin/apache-maven-3.6.3/bin
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
@@ -87,4 +87,8 @@ export PATH="$HOME/.serverless/bin:$PATH"
 
  # add folder for npm global installs to path
  # https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
-path+=/Users/davidmurphy/.npm-global/bin
+path+=~/.npm-global/bin
+
+
+ # add bin for subl
+path+=~/bin
