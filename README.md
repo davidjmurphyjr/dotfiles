@@ -2,17 +2,11 @@
 
 Installation
 ```
-git clone https://github.com/davidjmurphyjr/dotfiles.git ~/.dotfiles
+git clone https://github.com/davidjmurphyjr/dotfiles.git ~/SourceCode/dotfiles
 ```
 
 
 Create symlinks
 ```
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-```
-
-
-Install zsh-nvm
-```
-git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
+ln -s ~/SourceCode/dotfiles/.zshrc ~/.zshrc
 ```
